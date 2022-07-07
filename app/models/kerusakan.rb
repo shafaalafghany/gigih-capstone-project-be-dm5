@@ -1,0 +1,2 @@
+class Kerusakan < ApplicationRecord
+end

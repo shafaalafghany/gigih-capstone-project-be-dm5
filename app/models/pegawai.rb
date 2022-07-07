@@ -1,0 +1,2 @@
+class Pegawai < ApplicationRecord
+end

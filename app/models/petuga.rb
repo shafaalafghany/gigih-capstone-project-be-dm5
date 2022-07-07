@@ -1,0 +1,2 @@
+class Petuga < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Kejadian < ApplicationRecord
+end

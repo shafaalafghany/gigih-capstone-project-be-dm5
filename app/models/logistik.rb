@@ -1,0 +1,2 @@
+class Logistik < ApplicationRecord
+end

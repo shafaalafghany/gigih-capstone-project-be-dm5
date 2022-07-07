@@ -1,0 +1,2 @@
+class Pelapor < ApplicationRecord
+end

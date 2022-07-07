@@ -1,0 +1,2 @@
+class Posko < ApplicationRecord
+end

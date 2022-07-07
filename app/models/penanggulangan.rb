@@ -1,0 +1,2 @@
+class Penanggulangan < ApplicationRecord
+end
