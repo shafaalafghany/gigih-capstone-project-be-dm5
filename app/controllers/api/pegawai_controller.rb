@@ -61,7 +61,7 @@ module Api
     end
 
     def find_pegawai
-      @pelapor = Pegawai.find(params[:id])
+      @pegawai = Pegawai.find(params[:id])
     end
   end
 end
