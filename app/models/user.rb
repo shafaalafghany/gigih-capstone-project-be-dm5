@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    has_many :pelapors
+    has_one :pegawai
+
     has_secure_password
 
     validates :nama, presence: true
