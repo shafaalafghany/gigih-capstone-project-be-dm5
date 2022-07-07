@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       post '/', to: 'authentication#register'
       post '/login', to: 'authentication#login'
     end
-    resources :pelapor, :pegawai, :kejadian, :posko
+    resources :pelapor, :pegawai, :kejadian, :posko, :kerusakan
     # namespace :users do
     #   resource :users, param: :_id
     # end
