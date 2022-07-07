@@ -11,7 +11,10 @@ module Api
     end
 
     def show
-      render json: @pelapor
+      render json: {
+        values: @pelapor,
+        message: "Success",
+      }, status: 200
     end
 
     def new
@@ -21,7 +24,10 @@ module Api
     def create
       @pelapor = Pelapor.new(pelapor_params)
       if @pelapor.save
-        render json: @pelapor
+        render json: {
+          values: @pelapor,
+          message: "Success Create Pelapor",
+        }, status: 201
       else
         render error: { error: 'Uneable to create Pelapor.'}, status: 400
       end
