@@ -1,5 +1,6 @@
 module Api
   class DistribusiController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_distribusi, only: [:show, :update, :destroy]
 
     def index

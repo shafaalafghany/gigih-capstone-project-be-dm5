@@ -1,5 +1,6 @@
 module Api
   class PegawaiController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_pegawai, only: [:show, :update, :destroy]
 
     def index

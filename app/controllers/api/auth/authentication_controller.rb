@@ -4,12 +4,12 @@ module Api
             before_action :authorize_jwt, except: [:login, :register]
 
             def register
-                @user = User.create(user_params)
+                @user = User.new(user_params)
 
                 if @user.save
                     render json: { status: 'success', message: 'create account successful' }, status: :created
                 else
-                    render json: { status: 'fail', message: @user.errors.full_message }, status: :unprocessable_entity
+                    render json: { status: 'fail', message: @user.errors }, status: :unprocessable_entity
                 end
             end
         

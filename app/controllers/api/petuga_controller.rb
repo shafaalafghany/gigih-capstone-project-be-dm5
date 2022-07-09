@@ -1,5 +1,6 @@
 module Api
   class PetugaController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_petuga, only: [:show, :update, :destroy]
 
     def index

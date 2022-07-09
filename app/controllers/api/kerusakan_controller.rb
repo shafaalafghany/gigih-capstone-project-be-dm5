@@ -1,5 +1,6 @@
 module Api
   class KerusakanController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_kerusakan, only: [:show, :update, :destroy]
 
     def index

@@ -1,5 +1,6 @@
 module Api
   class LogistikController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_logistik, only: [:show, :update, :destroy]
 
     def index

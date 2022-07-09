@@ -1,5 +1,6 @@
 module Api
   class PoskoController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_posko, only: [:show, :update, :destroy]
 
     def index

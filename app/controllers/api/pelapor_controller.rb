@@ -1,5 +1,6 @@
 module Api
   class PelaporController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_pelapor, only: [:show, :update, :destroy]
 
     def index

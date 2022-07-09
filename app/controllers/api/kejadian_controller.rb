@@ -1,5 +1,6 @@
 module Api
   class KejadianController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_kejadian, only: [:show, :update, :destroy]
 
     def index

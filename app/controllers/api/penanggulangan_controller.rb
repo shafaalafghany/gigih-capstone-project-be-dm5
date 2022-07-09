@@ -1,5 +1,6 @@
 module Api
   class PenanggulanganController < ApplicationController
+    before_action :authorize_jwt
     before_action :find_penaggulangan, only: [:show, :update, :destroy]
 
     def index
