@@ -5,8 +5,11 @@ Rails.application.routes.draw do
       post '/login', to: 'authentication#login'
     end
     resources :pelapor, :pegawai, :kejadian, :posko, :kerusakan, :penanggulangan, 
-    :logistik, :penerima, :petuga, :distribusi
-    
+    :logistik, :penerima, :petuga, :distribusi, :laporan_bencana, :laporan_bantuan, :dashboard
+
     resources :users, :except => [:create, :index]
+    # namespace :users do
+    #   resource :users, param: :_id
+    # end
   end
 end

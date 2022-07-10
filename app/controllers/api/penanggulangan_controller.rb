@@ -1,7 +1,7 @@
 module Api
   class PenanggulanganController < ApplicationController
     before_action :authorize_jwt
-    before_action :find_penaggulangan, only: [:show, :update, :destroy]
+    before_action :find_penanggulangan, only: [:show, :update, :destroy]
 
     def index
       @penanggulangan = Penanggulangan.all
