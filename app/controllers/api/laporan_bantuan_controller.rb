@@ -25,7 +25,7 @@ module Api
           message: "Success Create Laporan Bencana",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Laporan Bencana.'}, status: 400
+        render json: { error: 'Uneable to create Laporan Bencana.'}, status: 400
       end
     end
 
@@ -35,7 +35,7 @@ module Api
         @laporan_bantuan.update(laporan_bantuan_params)
         render json: { message: 'Laporan Bencana succsessfully updated,'}, status: 200
       else
-        render error: { error: 'Uneable to delete Laporan Bencana.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Bencana.'}, status: 400
       end
     end
 
@@ -45,7 +45,7 @@ module Api
         @laporan_bantuan.destroy
         render json: { message: 'Laporan Bencana succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Laporan Bencana.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Bencana.'}, status: 400
       end
     end
 

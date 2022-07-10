@@ -30,7 +30,7 @@ module Api
           message: "Success Create Distribusi",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Distribusi.'}, status: 400
+        render json: { error: 'Uneable to create Distribusi.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @distribusi.update(distribusi_params)
         render json: { message: 'Laporan Distribusi succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Laporan Distribusi.'}, status: 400
+        render json: { error: 'Uneable to update Laporan Distribusi.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @distribusi.destroy
         render json: { message: 'Laporan Distribusi succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Laporan Distribusi.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Distribusi.'}, status: 400
       end
     end
 

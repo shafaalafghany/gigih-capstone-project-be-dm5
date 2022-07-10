@@ -30,7 +30,7 @@ module Api
           message: "Success Create Pegawai",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Pegawai.'}, status: 400
+        render json: { error: 'Uneable to create Pegawai.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @pegawai.update(pegawai_params)
         render json: { message: 'Pegawai succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Pegawai.'}, status: 400
+        render json: { error: 'Uneable to update Pegawai.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @pegawai.destroy
         render json: { message: 'Pegawai succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Pegawai.'}, status: 400
+        render json: { error: 'Uneable to delete Pegawai.'}, status: 400
       end
     end
 

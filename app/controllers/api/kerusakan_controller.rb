@@ -30,7 +30,7 @@ module Api
           message: "Success Create Laporan Kerusakan",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Laporan Kerusakan.'}, status: 400
+        render json: { error: 'Uneable to create Laporan Kerusakan.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @kerusakan.update(kerusakan_params)
         render json: { message: 'Laporan Kerusakan succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Laporan Kerusakan.'}, status: 400
+        render json: { error: 'Uneable to update Laporan Kerusakan.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @kerusakan.destroy
         render json: { message: 'Laporan Kerusakan succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Laporan Kerusakan.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Kerusakan.'}, status: 400
       end
     end
 

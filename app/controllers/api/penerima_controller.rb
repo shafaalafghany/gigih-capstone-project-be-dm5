@@ -30,7 +30,7 @@ module Api
           message: "Success Create Penerima",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Penerima.'}, status: 400
+        render json: { error: 'Uneable to create Penerima.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @penerima.update(penerima_params)
         render json: { message: 'Penerima succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Penerima.'}, status: 400
+        render json: { error: 'Uneable to update Penerima.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @penerima.destroy
         render json: { message: 'Penerima succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Penerima.'}, status: 400
+        render json: { error: 'Uneable to delete Penerima.'}, status: 400
       end
     end
 

@@ -30,7 +30,7 @@ module Api
           message: "Success Create Logistik",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Logistik.'}, status: 400
+        render json: { error: 'Uneable to create Logistik.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @logistik.update(logistik_params)
         render json: { message: 'Logistik succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Logistik.'}, status: 400
+        render json: { error: 'Uneable to update Logistik.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @logistik.destroy
         render json: { message: 'Logistik succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Logistik.'}, status: 400
+        render json: { error: 'Uneable to delete Logistik.'}, status: 400
       end
     end
 

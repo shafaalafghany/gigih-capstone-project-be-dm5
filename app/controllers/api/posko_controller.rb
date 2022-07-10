@@ -30,7 +30,7 @@ module Api
           message: "Success Create Posko",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Posko.'}, status: 400
+        render json: { error: 'Uneable to create Posko.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @posko.update(posko_params)
         render json: { message: 'Posko succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Posko.'}, status: 400
+        render json: { error: 'Uneable to update Posko.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @posko.destroy
         render json: { message: 'Posko succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Posko.'}, status: 400
+        render json: { error: 'Uneable to delete Posko.'}, status: 400
       end
     end
 

@@ -30,7 +30,7 @@ module Api
           message: "Success Create Kejadian",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Kejadian.'}, status: 400
+        render json: { error: 'Uneable to create Kejadian.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @kejadian.update(kejadian_params)
         render json: { message: 'Laporan Kejadian succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Laporan Kejadian.'}, status: 400
+        render json: { error: 'Uneable to update Laporan Kejadian.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @kejadian.destroy
         render json: { message: 'Laporan Kejadian succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Laporan Kejadian.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Kejadian.'}, status: 400
       end
     end
 

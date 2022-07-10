@@ -30,7 +30,7 @@ module Api
           message: "Success Create Pelapor",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Pelapor.'}, status: 400
+        render json: { error: 'Uneable to create Pelapor.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @pelapor.update(pelapor_params)
         render json: { message: 'Pelapor succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Pelapor.'}, status: 400
+        render json: { error: 'Uneable to update Pelapor.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @pelapor.destroy
         render json: { message: 'Pelapor succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Pelapor.'}, status: 400
+        render json: { error: 'Uneable to delete Pelapor.'}, status: 400
       end
     end
 

@@ -30,7 +30,7 @@ module Api
           message: "Success Create Laporan Penanggulangan",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Laporan Penanggulangan.'}, status: 400
+        render json: { error: 'Uneable to create Laporan Penanggulangan.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @penanggulangan.update(penanggulangan_params)
         render json: { message: 'Laporan Penanggulangan succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Laporan Penanggulangan.'}, status: 400
+        render json: { error: 'Uneable to update Laporan Penanggulangan.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @penanggulangan.destroy
         render json: { message: 'Laporan Penanggulangan succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Laporan Penanggulangan.'}, status: 400
+        render json: { error: 'Uneable to delete Laporan Penanggulangan.'}, status: 400
       end
     end
 

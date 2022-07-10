@@ -1,4 +1,4 @@
 class Penanggulangan < ApplicationRecord
   belongs_to :kejadian
-  belongs_to :pegawai
+  belongs_to :petuga
 end

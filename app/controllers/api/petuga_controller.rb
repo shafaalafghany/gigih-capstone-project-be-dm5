@@ -30,7 +30,7 @@ module Api
           message: "Success Create Petugas",
         }, status: 201
       else
-        render error: { error: 'Uneable to create Petugas.'}, status: 400
+        render json: { error: 'Uneable to create Petugas.'}, status: 400
       end
     end
 
@@ -43,7 +43,7 @@ module Api
         @petuga.update(petuga_params)
         render json: { message: 'Petugas succsessfully updated,'}, status: 200
       else 
-        render error: { error: 'Uneable to update Petugas.'}, status: 400
+        render json: { error: 'Uneable to update Petugas.'}, status: 400
       end
     end
 
@@ -52,7 +52,7 @@ module Api
         @petuga.destroy
         render json: { message: 'Petugas succsessfully deleted,'}, status: 200
       else 
-        render error: { error: 'Uneable to delete Petugas.'}, status: 400
+        render json: { error: 'Uneable to delete Petugas.'}, status: 400
       end
     end
 
