@@ -4,7 +4,7 @@ class CreatePenanggulangans < ActiveRecord::Migration[7.0]
       t.datetime :tanggal
       t.string :penanggulangan
       t.string :lokasi
-      t.belongs_to :petuga
+      t.belongs_to :petugas
       t.belongs_to :kejadian
       t.timestamps
     end

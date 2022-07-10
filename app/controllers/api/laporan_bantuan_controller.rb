@@ -4,12 +4,12 @@ module Api
 
     def index
       @laporan_bantuan = Logistik.all
-      render :json => @laporan_bantuan(:include => [:distribusis])
+      render :json => @laporan_bantuan.to_json(:include => [:distribusis])
     end
 
     def show
       @laporan_bantuan = Logistik.find(params[:id])
-      render :json => @laporan_bantuan(:include => [:distribusis])
+      render :json => @laporan_bantuan.to_json(:include => [:distribusis])
     end
 
     def new

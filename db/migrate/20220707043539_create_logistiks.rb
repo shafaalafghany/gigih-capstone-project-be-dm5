@@ -6,7 +6,7 @@ class CreateLogistiks < ActiveRecord::Migration[7.0]
       t.string :jumlah
       t.datetime :tanggal_distribusi
       t.belongs_to :penerima
-      t.belongs_to :petuga
+      t.belongs_to :petugas
       t.belongs_to :kejadian
       t.timestamps
     end
