@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_07_043626) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_10_042157) do
   create_table "distribusis", force: :cascade do |t|
     t.datetime "tanggal"
     t.integer "jumlah"
@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_043626) do
     t.integer "pelapor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status"
     t.index ["pelapor_id"], name: "index_kejadians_on_pelapor_id"
   end
 
