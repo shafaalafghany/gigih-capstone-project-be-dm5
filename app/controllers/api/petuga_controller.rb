@@ -4,7 +4,7 @@ module Api
     before_action :find_petuga, only: [:show, :update, :destroy]
 
     def index
-      @petuga = Petugas.all
+      @petuga = Petuga.all
       render json: {
         values: @petuga,
         message: "Success",
@@ -19,11 +19,11 @@ module Api
     end
 
     def new
-      @petuga = Petugas.new
+      @petuga = Petuga.new
     end
 
     def create
-      @petuga = Petugas.new(petuga_params)
+      @petuga = Petuga.new(petuga_params)
       if @petuga.save
         render json: {
           values: @petuga,
@@ -35,7 +35,7 @@ module Api
     end
 
     def edit
-      @petuga = Petugas.where(id: params[:id]).first
+      @petuga = Petuga.where(id: params[:id]).first
     end
 
     def update
@@ -62,7 +62,7 @@ module Api
     end
 
     def find_petuga
-      @petuga = Petugas.find(params[:id])
+      @petuga = Petuga.find(params[:id])
     end
   end
 end
