@@ -4,4 +4,6 @@ class Kejadian < ApplicationRecord
   has_many :kerusakans
   has_many :penanggulangans
   has_many :logistiks
+
+  accepts_nested_attributes_for :kerusakans
 end
