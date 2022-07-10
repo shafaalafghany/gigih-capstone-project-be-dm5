@@ -1,6 +1,7 @@
 module Api
   class LaporanBencanaController < ApplicationController
-
+    before_action :authorize_jwt
+    
     def index
       @pelapor = Pelapor.all
       render :json => @pelapor.to_json(:include => [:kejadians => {:include => [:kerusakans]}])
@@ -63,7 +64,7 @@ module Api
 
     def laporan_bencana_params
       params.permit(:nama, :nik, :telp, :tempat_lahir, :tanggal_lahir, :tanggal, :user_id, 
-        kejadians_attributes: [:tanggal, :kejadian, :deskripsi_kejadian, :lokasi, 
+        kejadians_attributes: [:tanggal, :kejadian, :deskripsi_kejadian, :lokasi, :status,
           kerusakans_attributes: [:kerusakan, :kerugian, :keterangan]])
     end
 

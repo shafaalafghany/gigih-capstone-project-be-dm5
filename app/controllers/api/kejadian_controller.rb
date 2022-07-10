@@ -58,7 +58,7 @@ module Api
 
     private 
     def kejadian_params
-      params.permit(:tanggal, :kejadian, :deskripsi_kejadian, :lokasi, :pelapor_id)
+      params.permit(:tanggal, :kejadian, :deskripsi_kejadian, :lokasi, :status, :pelapor_id)
     end
 
     def find_kejadian
